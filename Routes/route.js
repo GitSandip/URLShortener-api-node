@@ -8,12 +8,13 @@
 // export default route;
 
 import { Router } from "express";
-import { takeUrl, getUrl } from "../Controller/postUrl.js";
+import postUrl from "../Controller/postUrl.js";
+// import { getUrl } from "../Controller/getUrl.js";
 
 const route = Router();
 
-// Use arrow functions as route handlers
-route.post("/", takeUrl);
-route.get("/", getUrl);
+
+route.post("/", postUrl);
+// route.get("/", getUrl);
 
 export default route;

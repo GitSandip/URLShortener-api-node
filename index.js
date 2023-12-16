@@ -1,4 +1,6 @@
 import Express from 'express';
+import dotenv from 'dotenv';
+dotenv.config();
 import bodyParser from 'body-parser';
 import Connection from './DB/db.js';  // Add '.js' extension
 import route from './Routes/route.js';
