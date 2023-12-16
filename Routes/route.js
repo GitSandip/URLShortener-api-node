@@ -9,12 +9,12 @@
 
 import { Router } from "express";
 import postUrl from "../Controller/postUrl.js";
-// import { getUrl } from "../Controller/getUrl.js";
+import { getUrl } from "../Controller/getUrl.js";
 
 const route = Router();
 
 
 route.post("/", postUrl);
-// route.get("/", getUrl);
+route.get("/:id", getUrl);
 
 export default route;
