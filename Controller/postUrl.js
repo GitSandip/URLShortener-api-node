@@ -4,7 +4,8 @@ const postUrl = async (req, res) => {
     try {
         // Validate that both long_url and back_half are provided
         const { long_url, back_half } = req.body;
-
+        console.log(req.body);
+        
         if (!long_url || !back_half) {
             return res.status(400).json({ message: "Both long_url and back_half are required." });
         }

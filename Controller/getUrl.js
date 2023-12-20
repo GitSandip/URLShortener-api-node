@@ -10,7 +10,8 @@ export const getUrl = async (req, res) => {
 
         if (exist.length > 0) {
             const long_url = exist[0].long_url;
-            return res.redirect(long_url);
+            return res.json({long_url});
+            // return res.redirect(long_url);
         } else {
             return res.status(404).json({ message: "URL not found." });
         }
